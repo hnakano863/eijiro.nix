@@ -4,7 +4,7 @@
   outputs = { self, nixpkgs }: {
 
     overlay = final: prev: {
-      dictDBs = prev.dictDBs // {
+      dictdDBs = prev.dictdDBs // {
         eijiro = with final; stdenvNoCC.mkDerivation {
           name = "dictd-db-eijiro";
           src = ./EIJIRO-1448.ZIP;
@@ -47,6 +47,6 @@
           system = "x86_64-linux";
           overlays = [ self.outputs.overlay ];
         }
-      ).dictDBs.eijiro;
+      ).dictdDBs.eijiro;
   };
 }
