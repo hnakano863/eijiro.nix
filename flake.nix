@@ -35,7 +35,7 @@
 
           meta = {
             description = "dictd-db dictionary for dictd";
-            platforms = stdenv.lib.platforms.linux;
+            platforms = lib.platforms.linux;
           };
         };
       };
